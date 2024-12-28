@@ -1,5 +1,3 @@
 {
-  "conventionalCommits.scopes": [
-    "Estrutura do projeto"
-  ]
+  "conventionalCommits.scopes": ["Estrutura do projeto"]
 }
