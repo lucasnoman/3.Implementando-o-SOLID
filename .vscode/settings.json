@@ -1,6 +1,7 @@
 {
   "conventionalCommits.scopes": [
     "Estrutura do projeto",
-    "Integração com Prisma ORM"
+    "Integração com Prisma ORM",
+    "Caso de uso e design patterns"
   ]
 }
