@@ -36,6 +36,7 @@
     "vitest": "2.1.8"
   },
   "dependencies": {
+    "@fastify/jwt": "9.0.2",
     "@prisma/client": "6.1.0",
     "@types/eslint-config-prettier": "6.11.3",
     "bcryptjs": "2.4.3",
