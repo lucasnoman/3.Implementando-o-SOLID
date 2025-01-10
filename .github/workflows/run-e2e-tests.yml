@@ -40,6 +40,9 @@ jobs:
       - name: Instala dependências
         run: pnpm install
 
+      - name: Gera os tipos de dados do Prisma
+        run: pnpm prisma generate
+
       - name: Roda os testes End To End
         run: pnpm test:e2e
         env:
