@@ -22,6 +22,11 @@ jobs:
           node-version: 22
           cache: 'pnpm'
 
-      - run: pnpm install
+      - name: Instala dependências
+        run: pnpm install
 
-      - run: pnpm run test
+      - name: Gera os tipos de dados do Prisma
+        run: pnpm prisma generate
+
+      - name: Roda os testes End To End
+        run: pnpm test
