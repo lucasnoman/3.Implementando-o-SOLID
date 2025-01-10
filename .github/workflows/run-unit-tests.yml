@@ -22,6 +22,8 @@ jobs:
           node-version: 22
           cache: 'pnpm'
 
-      - run: pnpm install
+      - name: Instala dependências
+        run: pnpm install
 
-      - run: pnpm run test
+      - name: Roda os testes End To End
+        run: pnpm run test
