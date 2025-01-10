@@ -5,6 +5,7 @@
     "Caso de uso e design patterns",
     "Design Patterns & Testes",
     "Implementando casos de uso",
-    "Controllers & Testes E2E"
+    "Controllers & Testes E2E",
+    "CI/CD da aplicação",
   ]
 }
