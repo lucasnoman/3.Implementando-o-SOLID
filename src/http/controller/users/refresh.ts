@@ -27,7 +27,7 @@ export async function refresh(request: FastifyRequest, reply: FastifyReply) {
   return reply
     .setCookie('refreshToken', refreshToken, {
       path: '/',
-      // secure: true,
+      // secure: true, // NOTE: to be used with HTTPS
       sameSite: true,
       httpOnly: true,
     })
