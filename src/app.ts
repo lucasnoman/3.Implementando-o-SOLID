@@ -1,6 +1,14 @@
 import fastifyCookie from '@fastify/cookie'
+import { fastifyCors } from '@fastify/cors'
 import fastifyJwt from '@fastify/jwt'
+import { fastifySwagger } from '@fastify/swagger'
 import fastify from 'fastify'
+import {
+  jsonSchemaTransform,
+  serializerCompiler,
+  validatorCompiler,
+  ZodTypeProvider,
+} from 'fastify-type-provider-zod'
 import { ZodError } from 'zod'
 
 import { checkInsRoutes } from '@/http/controller/check-ins/routes'
@@ -9,7 +17,24 @@ import { gymsRoutes } from '@/http/controller/gyms/routes'
 import { env } from './env'
 import { usersRoutes } from './http/controller/users/routes'
 
-export const app = fastify()
+export const app = fastify().withTypeProvider<ZodTypeProvider>()
+
+app.setValidatorCompiler(validatorCompiler)
+app.setSerializerCompiler(serializerCompiler)
+
+app.register(fastifyCors, { origin: '*' })
+
+app.register(fastifySwagger, {
+  openapi: {
+    info: {
+      title: 'Typed API',
+      version: '0.1.0',
+    },
+  },
+  transform: jsonSchemaTransform,
+})
+
+app.register(import('@scalar/fastify-api-reference'), { routePrefix: '/docs' })
 
 app.register(fastifyJwt, {
   secret: env.JWT_SECRET,
