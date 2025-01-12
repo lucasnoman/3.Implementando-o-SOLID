@@ -26,6 +26,9 @@ importers:
       '@scalar/fastify-api-reference':
         specifier: 1.25.102
         version: 1.25.102
+      '@scalar/themes':
+        specifier: 0.9.59
+        version: 0.9.59
       '@types/eslint-config-prettier':
         specifier: 6.11.3
         version: 6.11.3
@@ -823,6 +826,10 @@ packages:
 
   '@scalar/openapi-types@0.1.5':
     resolution: {integrity: sha512-6geH9ehvQ/sG/xUyy3e0lyOw3BaY5s6nn22wHjEJhcobdmWyFER0O6m7AU0ZN4QTjle/gYvFJOjj552l/rsNSw==}
+    engines: {node: '>=18'}
+
+  '@scalar/themes@0.9.59':
+    resolution: {integrity: sha512-yqkf7UckVveZP9GpH0PJ4i5gMLICL2KFIe6OL1DGV0DqnMhGlsB0P24QMo7vxi0SnU4pu/hL1+iwYFHHyONoGA==}
     engines: {node: '>=18'}
 
   '@scalar/types@0.0.25':
@@ -2681,6 +2688,10 @@ snapshots:
       fastify-plugin: 4.5.1
 
   '@scalar/openapi-types@0.1.5': {}
+
+  '@scalar/themes@0.9.59':
+    dependencies:
+      '@scalar/types': 0.0.25
 
   '@scalar/types@0.0.25':
     dependencies:

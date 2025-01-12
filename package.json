@@ -47,6 +47,7 @@
     "@fastify/swagger": "9.4.1",
     "@prisma/client": "6.1.0",
     "@scalar/fastify-api-reference": "1.25.102",
+    "@scalar/themes": "0.9.59",
     "@types/eslint-config-prettier": "6.11.3",
     "bcryptjs": "2.4.3",
     "dayjs": "1.11.13",

@@ -34,7 +34,10 @@ app.register(fastifySwagger, {
   transform: jsonSchemaTransform,
 })
 
-app.register(import('@scalar/fastify-api-reference'), { routePrefix: '/docs' })
+app.register(import('@scalar/fastify-api-reference'), {
+  routePrefix: '/docs',
+  configuration: { theme: 'elysiajs' },
+})
 
 app.register(fastifyJwt, {
   secret: env.JWT_SECRET,
